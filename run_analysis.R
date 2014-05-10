@@ -7,8 +7,8 @@
 ## Human Activity Recognition Using Smartphones Dataset
 ## and creatres two tidy datasets:
 ##
-## humanActivityRecognitionCompact.csv
-## humanActivityRecognitionAvegares.csv
+## har_dataset
+## har_averages
 ##
 ## see: CodeBook.md for a description of the resulting dataset and how
 ## they are created from the raw data.
@@ -19,6 +19,16 @@
 ###############################
 ## TRAIN DATASET PROCESSING  ##
 ###############################
+
+if(!file.exists("data/train/X_train.txt")) stop("Missing file: data/train/X_train.txt")
+if(!file.exists("data/train/y_train.txt")) stop("Missing file: data/train/y_train.txt")
+if(!file.exists("data/train/subject_train.txt")) stop("Missing file: data/train/subject_train.txt")
+
+if(!file.exists("data/test/X_test.txt")) stop("Missing file: data/test/X_test.txt")
+if(!file.exists("data/test/y_test.txt")) stop("Missing file: data/test/y_test.txt")
+if(!file.exists("data/test/subject_test.txt")) stop("Missing file: data/test/subject_test.txt")
+
+message("Loading train files")
 
 ## load train x
 train <- read.table("data/train/X_train.txt",stringsAsFactors=FALSE)
@@ -96,6 +106,8 @@ train$activity<-as.factor(train$activity)
 ## TEST DATASET PROCESSING #
 ############################
 
+message("Loading test files")
+
 ## load test x
 test <- read.table("data/test/X_test.txt",stringsAsFactors=FALSE)
 ## load test y
@@ -156,6 +168,7 @@ test<-cbind(test,test_y)
 colnames(test)[32]<-"activity"
 test$activity<-as.factor(test$activity)
 
+message("Creating har_dataset")
 
 ## merge train and test datasets into single dataset
 har_dataset<-rbind(train,test)
@@ -165,8 +178,22 @@ har_dataset<-rbind(train,test)
 ## Creates a second, independent tidy data set with the average of 
 ## each variable for each activity and each subject. 
 
+message("Creating har_averages")
+
+options(warn=-1)
 har_averages<-aggregate(har_dataset,list(subject=har_dataset$subject,activity=har_dataset$activity), mean)
 har_averages[[34]]<-NULL
 har_averages[[3]]<-NULL
+options(warn=0)
 
+## Cleaning environment
+rm(test)
+rm(test_subject)
+rm(test_y)
+rm(train)
+rm(train_subject)
+rm(train_y)
+rm(activities)
+rm(keeps)
 
+message("Process finished datasets created!")
