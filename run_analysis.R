@@ -165,7 +165,8 @@ har_dataset<-rbind(train,test)
 ## Creates a second, independent tidy data set with the average of 
 ## each variable for each activity and each subject. 
 
-har_averages<-aggregate(har_dataset,list(subject=data$subject,activity=data$activity), mean)
+har_averages<-aggregate(har_dataset,list(subject=har_dataset$subject,activity=har_dataset$activity), mean)
 har_averages[[34]]<-NULL
 har_averages[[3]]<-NULL
+
 

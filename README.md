@@ -8,6 +8,11 @@ Some variables that are computable from the sensor variables were excluded.
 If you need to use variables that were in the raw dataset but not here
 please modify run_analysis.R to your needs.
 
+The Raw data can be downloaded from:
+https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+
+Please Unzip this into a "data" directory 
+
 ATTRIBUTES FROM THE RAW DATA INCLUDED IN THIS DATASET:
 -----------------------------------------------------
 
