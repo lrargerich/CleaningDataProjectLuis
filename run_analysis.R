@@ -39,54 +39,54 @@ train_subject <- read.table("data/train/subject_train.txt",stringsAsFactors=FALS
 
 ## Rename Columns to Human Readable names
 
-colnames(train)[1]<-"body_acceleration_x(mean)"
-colnames(train)[2]<-"body_acceleration_y(mean)"
-colnames(train)[3]<-"body_acceleration_z(mean)"
-colnames(train)[4]<-"body_acceleration_x(std)"
-colnames(train)[5]<-"body_acceleration_y(std)"
-colnames(train)[6]<-"body_acceleration_z(std"
+colnames(train)[1]<-"bodyaccelerationxmean"
+colnames(train)[2]<-"bodyaccelerationymean"
+colnames(train)[3]<-"bodyaccelerationzmean"
+colnames(train)[4]<-"bodyaccelerationxstd"
+colnames(train)[5]<-"bodyaccelerationystd"
+colnames(train)[6]<-"bodyaccelerationzstd"
 
-colnames(train)[41]<-"gravity_acceleration_x(mean)"
-colnames(train)[42]<-"gravity_acceleration_y(mean)"
-colnames(train)[43]<-"gravity_acceleration_z(mean)"
-colnames(train)[44]<-"gravity_acceleration_x(std)"
-colnames(train)[45]<-"gravity_acceleration_y(std)"
-colnames(train)[46]<-"gravity_acceleration_z(std)"
+colnames(train)[41]<-"gravityaccelerationxmean"
+colnames(train)[42]<-"gravityaccelerationymean"
+colnames(train)[43]<-"gravityaccelerationzmean"
+colnames(train)[44]<-"gravityaccelerationxstd"
+colnames(train)[45]<-"gravityaccelerationystd"
+colnames(train)[46]<-"gravityaccelerationzstd"
 
-colnames(train)[81]<-"body_acceleration_jerk_x(mean)"
-colnames(train)[82]<-"body_acceleration_jerk_y(mean)"
-colnames(train)[83]<-"body_acceleration_jerk_z(mean)"
+colnames(train)[81]<-"bodyaccelerationjerkxmean"
+colnames(train)[82]<-"bodyaccelerationjerkymean"
+colnames(train)[83]<-"bodyaccelerationjerkzmean"
 
-colnames(train)[84]<-"body_acceleration_jerk_x(std)"
-colnames(train)[85]<-"body_acceleration_jerk_y(std)"
-colnames(train)[86]<-"body_acceleration_jerk_z(std)"
+colnames(train)[84]<-"bodyaccelerationjerkxstd"
+colnames(train)[85]<-"bodyaccelerationjerkystd"
+colnames(train)[86]<-"bodyaccelerationjerkzstd"
 
-colnames(train)[121]<-"body_gyro_x(mean)"
-colnames(train)[122]<-"body_gyro_y(mean)"
-colnames(train)[123]<-"body_gyro_z(mean)"
+colnames(train)[121]<-"bodygyroxmean"
+colnames(train)[122]<-"bodygyroymean"
+colnames(train)[123]<-"bodygyrozmean"
 
-colnames(train)[124]<-"body_gyro_x(std)"
-colnames(train)[125]<-"body_gyro_y(std)"
-colnames(train)[126]<-"body_gyro_z(std)"
+colnames(train)[124]<-"bodygyroxstd"
+colnames(train)[125]<-"bodygyroystd"
+colnames(train)[126]<-"bodygyrozstd"
 
-colnames(train)[161]<-"body_gyro_jerk_x(mean)"
-colnames(train)[162]<-"body_gyro_jerk_y(mean)"
-colnames(train)[163]<-"body_gyro_jerk_z(mean)"
+colnames(train)[161]<-"bodygyrojerkxmean"
+colnames(train)[162]<-"bodygyrojerkymean"
+colnames(train)[163]<-"bodygyrojerkzmean"
 
-colnames(train)[164]<-"body_gyro_jerk_x(std)"
-colnames(train)[165]<-"body_gyro_jerk_y(std)"
-colnames(train)[166]<-"body_gyro_jerk_z(std)"
+colnames(train)[164]<-"bodygyrojerkxstd"
+colnames(train)[165]<-"bodygyrojerkystd"
+colnames(train)[166]<-"bodygyrojerkzstd"
 
-keeps<-c("body_acceleration_x(mean)","body_acceleration_y(mean)","body_acceleration_z(mean)",
-         "body_acceleration_x(std)","body_acceleration_y(std)","body_acceleration_z(std",
-         "gravity_acceleration_x(mean)","gravity_acceleration_y(mean)","gravity_acceleration_z(mean)",
-         "gravity_acceleration_x(std)","gravity_acceleration_y(std)","gravity_acceleration_z(std)",
-         "body_acceleration_jerk_x(mean)","body_acceleration_jerk_y(mean)","body_acceleration_jerk_z(mean)",
-         "body_acceleration_jerk_x(std)","body_acceleration_jerk_y(std)","body_acceleration_jerk_z(std)",
-         "body_gyro_x(mean)","body_gyro_y(mean)","body_gyro_z(mean)",
-         "body_gyro_x(std)","body_gyro_y(std)","body_gyro_z(std)",
-         "body_gyro_jerk_x(mean)","body_gyro_jerk_y(mean)","body_gyro_jerk_z(mean)",
-         "body_gyro_jerk_x(std)","body_gyro_jerk_y(std)","body_gyro_jerk_z(std)"
+keeps<-c("bodyaccelerationxmean","bodyaccelerationymean","bodyaccelerationzmean",
+         "bodyaccelerationxstd","bodyaccelerationystd","bodyaccelerationzstd",
+         "gravityaccelerationxmean","gravityaccelerationymean","gravityaccelerationzmean",
+         "gravityaccelerationxstd","gravityaccelerationystd","gravityaccelerationzstd",
+         "bodyaccelerationjerkxmean","bodyaccelerationjerkymean","bodyaccelerationjerkzmean",
+         "bodyaccelerationjerkxstd","bodyaccelerationjerkystd","bodyaccelerationjerkzstd",
+         "bodygyroxmean","bodygyroymean","bodygyrozmean",
+         "bodygyroxstd","bodygyroystd","bodygyrozstd",
+         "bodygyrojerkxmean","bodygyrojerkymean","bodygyrojerkzmean",
+         "bodygyrojerkxstd","bodygyrojerkystd","bodygyrojerkzstd"
 )
 
 train<-train[keeps]
@@ -117,43 +117,43 @@ test_subject <- read.table("data/test/subject_test.txt",stringsAsFactors=FALSE)
 
 ## Rename Columns to Human Readable names
 
-colnames(test)[1]<-"body_acceleration_x(mean)"
-colnames(test)[2]<-"body_acceleration_y(mean)"
-colnames(test)[3]<-"body_acceleration_z(mean)"
-colnames(test)[4]<-"body_acceleration_x(std)"
-colnames(test)[5]<-"body_acceleration_y(std)"
-colnames(test)[6]<-"body_acceleration_z(std"
+colnames(test)[1]<-"bodyaccelerationxmean"
+colnames(test)[2]<-"bodyaccelerationymean"
+colnames(test)[3]<-"bodyaccelerationzmean"
+colnames(test)[4]<-"bodyaccelerationxstd"
+colnames(test)[5]<-"bodyaccelerationystd"
+colnames(test)[6]<-"bodyaccelerationzstd"
 
-colnames(test)[41]<-"gravity_acceleration_x(mean)"
-colnames(test)[42]<-"gravity_acceleration_y(mean)"
-colnames(test)[43]<-"gravity_acceleration_z(mean)"
-colnames(test)[44]<-"gravity_acceleration_x(std)"
-colnames(test)[45]<-"gravity_acceleration_y(std)"
-colnames(test)[46]<-"gravity_acceleration_z(std)"
+colnames(test)[41]<-"gravityaccelerationxmean"
+colnames(test)[42]<-"gravityaccelerationymean"
+colnames(test)[43]<-"gravityaccelerationzmean"
+colnames(test)[44]<-"gravityaccelerationxstd"
+colnames(test)[45]<-"gravityaccelerationystd"
+colnames(test)[46]<-"gravityaccelerationzstd"
 
-colnames(test)[81]<-"body_acceleration_jerk_x(mean)"
-colnames(test)[82]<-"body_acceleration_jerk_y(mean)"
-colnames(test)[83]<-"body_acceleration_jerk_z(mean)"
+colnames(test)[81]<-"bodyaccelerationjerkxmean"
+colnames(test)[82]<-"bodyaccelerationjerkymean"
+colnames(test)[83]<-"bodyaccelerationjerkzmean"
 
-colnames(test)[84]<-"body_acceleration_jerk_x(std)"
-colnames(test)[85]<-"body_acceleration_jerk_y(std)"
-colnames(test)[86]<-"body_acceleration_jerk_z(std)"
+colnames(test)[84]<-"bodyaccelerationjerkxstd"
+colnames(test)[85]<-"bodyaccelerationjerkystd"
+colnames(test)[86]<-"bodyaccelerationjerkzstd"
 
-colnames(test)[121]<-"body_gyro_x(mean)"
-colnames(test)[122]<-"body_gyro_y(mean)"
-colnames(test)[123]<-"body_gyro_z(mean)"
+colnames(test)[121]<-"bodygyroxmean"
+colnames(test)[122]<-"bodygyroymean"
+colnames(test)[123]<-"bodygyrozmean"
 
-colnames(test)[124]<-"body_gyro_x(std)"
-colnames(test)[125]<-"body_gyro_y(std)"
-colnames(test)[126]<-"body_gyro_z(std)"
+colnames(test)[124]<-"bodygyroxstd"
+colnames(test)[125]<-"bodygyroystd"
+colnames(test)[126]<-"bodygyrozstd"
 
-colnames(test)[161]<-"body_gyro_jerk_x(mean)"
-colnames(test)[162]<-"body_gyro_jerk_y(mean)"
-colnames(test)[163]<-"body_gyro_jerk_z(mean)"
+colnames(test)[161]<-"bodygyrojerkxmean"
+colnames(test)[162]<-"bodygyrojerkymean"
+colnames(test)[163]<-"bodygyrojerkzmean"
 
-colnames(test)[164]<-"body_gyro_jerk_x(std)"
-colnames(test)[165]<-"body_gyro_jerk_y(std)"
-colnames(test)[166]<-"body_gyro_jerk_z(std)"
+colnames(test)[164]<-"bodygyrojerkxstd"
+colnames(test)[165]<-"bodygyrojerkystd"
+colnames(test)[166]<-"bodygyrojerkzstd"
 
 test<-test[keeps]
 
@@ -168,22 +168,22 @@ test<-cbind(test,test_y)
 colnames(test)[32]<-"activity"
 test$activity<-as.factor(test$activity)
 
-message("Creating har_dataset")
+message("Creating har dataset")
 
 ## merge train and test datasets into single dataset
-har_dataset<-rbind(train,test)
+har<-rbind(train,test)
 
 
 ## STEP 2
 ## Creates a second, independent tidy data set with the average of 
 ## each variable for each activity and each subject. 
 
-message("Creating har_averages")
+message("Creating haraverages")
 
 options(warn=-1)
-har_averages<-aggregate(har_dataset,list(subject=har_dataset$subject,activity=har_dataset$activity), mean)
-har_averages[[34]]<-NULL
-har_averages[[3]]<-NULL
+haraverages<-aggregate(har,list(subject=har$subject,activity=har$activity), mean)
+haraverages[[34]]<-NULL
+haraverages[[3]]<-NULL
 options(warn=0)
 
 ## Cleaning environment

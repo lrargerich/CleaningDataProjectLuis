@@ -19,11 +19,11 @@ Please Unzip this iside a "data" directory
 ATTRIBUTES FROM THE RAW DATA INCLUDED IN THIS DATASET:
 -----------------------------------------------------
 
-* tBodyAcc-XYZ  renamed as body_acceleration_xyz(mean|std)
-* tGravityAcc-XYZ renamed as gravity_acceleration_xyz(mean|std)
-* tBodyAccJerk-XYZ renamed as body_acceleration_jerk_xyz(mean|std)
-* tBodyGyro-XYZ renamed as body_gyro_xyz(mean|std)
-* tBodyGyroJerk-XYZ renamed as body_gyro_jerk_xyz(mean|std)
+* tBodyAcc-XYZ  renamed as bodyaccelerationxyz[mean|std]
+* tGravityAcc-XYZ renamed as gravityaccelerationxyz[mean|std]
+* tBodyAccJerk-XYZ renamed as bodyaccelerationjerkxyz[mean|std]
+* tBodyGyro-XYZ renamed as bodygyroxyz[mean|std]
+* tBodyGyroJerk-XYZ renamed as bodygyrojerkxyz[mean|std]
 
 ATTRIBUTES IN THE RAW DATA EXCLUDED FROM THE DATASET:
 ----------------------------------------------------
