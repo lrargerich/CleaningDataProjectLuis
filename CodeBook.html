@@ -144,60 +144,143 @@ hr {
 <body>
 <h1>Human Activity Recognition compact Datasets</h1>
 
-<h2>har-dataset</h2>
+<h2>har</h2>
 
 <p>Dataset with the sensor information for the human activity recognition project.
 Each row is a measurement.</p>
 
 <p>Attributes:</p>
 
-<p><strong>SUBJECT</strong></p>
+<p>[1] <strong>subject</strong></p>
 
 <p>One variable named subject (lowercase) indicating the subject of the sensor data</p>
 
-<p><em>ACTIVITY</em></p>
+<p>[2] <strong>bodyaccelerationxmean</strong></p>
+
+<p>Mean acceleration in x-axis</p>
+
+<p>[3] <strong>bodyaccelerationymean</strong></p>
+
+<p>Mean acceleration in y-axis</p>
+
+<p>[4] <strong>bodyaccelerationzmean</strong></p>
+
+<p>Mean acceleration in z-axis</p>
+
+<p>[5] <strong>bodyaccelerationxstd</strong></p>
+
+<p>Standard deviation for body acceleration x-axis</p>
+
+<p>[6] <strong>bodyaccelerationystd</strong></p>
+
+<p>Standard deviation for body acceleration y-axis</p>
+
+<p>[7] <strong>bodyaccelerationzstd</strong></p>
+
+<p>Standard deviation for body acceleration z-axis</p>
+
+<p>[8] <strong>gravityaccelerationxmean</strong></p>
+
+<p>Mean gravitic acceleration in x-axis</p>
+
+<p>[9] <strong>gravityaccelerationymean</strong></p>
+
+<p>Mean gravitic acceleration in y-axis</p>
+
+<p>[10] <strong>gravityaccelerationzmean</strong></p>
+
+<p>Mean gravitic acceleration in z-axis</p>
+
+<p>[11] <strong>gravityaccelerationxstd</strong></p>
+
+<p>Standard deviation for gravitic acceleration in x-axis</p>
+
+<p>[12] <strong>gravityaccelerationystd</strong></p>
+
+<p>Standard deviation for gravitic acceleration in y-axis</p>
+
+<p>[13] <strong>gravityaccelerationzstd</strong></p>
+
+<p>Standard deviation for gravitic acceleration in z-axis</p>
+
+<p>[14] <strong>bodyaccelerationjerkxmean</strong></p>
+
+<p>Mean of body acceleration jerk in x-axis</p>
+
+<p>[15] <strong>bodyaccelerationjerkymean</strong></p>
+
+<p>Mean of body acceleration jerk in y-axis</p>
+
+<p>[16] <strong>bodyaccelerationjerkzmean</strong></p>
+
+<p>Mean of body acceleration jerk in z-axis</p>
+
+<p>[17] <strong>bodyaccelerationjerkxstd</strong></p>
+
+<p>Standard deviation for body acceleration jerk in x-axis</p>
+
+<p>[18] <strong>bodyaccelerationjerkystd</strong></p>
+
+<p>Standard deviation for body acceleration jerk in y-axis</p>
+
+<p>[19] <strong>bodyaccelerationjerkzstd</strong></p>
+
+<p>Standard deviation for body acceleration jerk in z-axis</p>
+
+<p>[20] <strong>bodygyroxmean</strong></p>
+
+<p>Mean of body gyroscope in x-axis</p>
+
+<p>[21] <strong>bodygyroymean</strong></p>
+
+<p>Mean of body gyroscope in y-axis</p>
+
+<p>[22] <strong>bodygyrozmean</strong></p>
+
+<p>Mean of body gyroscope in z-axis</p>
+
+<p>[23] <strong>bodygyroxstd</strong></p>
+
+<p>Standard deviation for body gyroscope in x-axis</p>
+
+<p>[24] <strong>bodygyroystd</strong></p>
+
+<p>Standard deviation for body gyroscope in y-axis</p>
+
+<p>[25] <strong>bodygyrozstd</strong></p>
+
+<p>Standard deviation for body gyroscope in z-axis</p>
+
+<p>[26] <strong>bodygyrojerkxmean</strong></p>
+
+<p>Mean of body gyroscope jerk in x-axis</p>
+
+<p>[27] <strong>bodygyrojerkymean</strong></p>
+
+<p>Mean of body gyroscope jerk in y-axis</p>
+
+<p>[28] <strong>bodygyrojerkzmean</strong></p>
+
+<p>Mean of body gyroscope jerk in z-axis</p>
+
+<p>[29] <strong>bodygyrojerkxstd</strong></p>
+
+<p>Standard deviation for body gyroscope in x-axis</p>
+
+<p>[30] <strong>bodygyrojerkystd</strong></p>
+
+<p>Standard deviation for body gyroscope in y-axis</p>
+
+<p>[31] <strong>bodygyrojerkzstd</strong></p>
+
+<p>Standard deviation for body gyroscope in z-axis</p>
+
+<p>[32] <strong>activity</strong></p>
 
 <p>One variable named activity (lowercase) indicating the subject activity when
 the sensor information was recorded.</p>
 
-<p><em>BODY ACCELERATION</em></p>
-
-<p>A total of 6 variables with the following format:</p>
-
-<p>body_acceleration_xyz(mean|std)   </p>
-
-<p>example: body_acceleration_x(mean)   </p>
-
-<p><em>GRAVITY ACCELERATION</em></p>
-
-<p>A total of 6 variables with the following format:</p>
-
-<p>gravity_acceleration_xyz(mean|std)</p>
-
-<p>example: gravity_acceleration_z(std)</p>
-
-<p><em>BODY ACCELERATION JERK</em></p>
-
-<p>A total of 6 variables with the following format:</p>
-
-<p>body_acceleration_jerk_xyz(mean|std)
-example: body_acceleration_jerk_y(mean)</p>
-
-<p><em>BODY GYROSCOPE</em></p>
-
-<p>A total of 6 variables with the following format:</p>
-
-<p>body_gyro_xyz(mean|std)
-example: body_gyro_x(std)</p>
-
-<p><em>BODY GYROSCOPE JERK</em></p>
-
-<p>A total of 6 variables with the following format:</p>
-
-<p>body_gyro_jerk_xyz(mean|std)
-example: body_gyro_jerk_x(std)</p>
-
-<h2>har_averages</h2>
+<h2>haraverages</h2>
 
 <p>This dataset averages for each subject and activity the measurements of
 the sensors.
@@ -205,51 +288,134 @@ Each row is a unique combination of subject-activity.</p>
 
 <p>Attributes:</p>
 
-<p><em>SUBJECT</em></p>
+<p>[1] <strong>subject</strong></p>
 
-<p>One variable named subject (lowercase) indicating the subject of the sensor data</p>
+<p>Subject (lowercase) indicating the subject of the sensor data</p>
 
-<p><em>ACTIVITY</em></p>
+<p>[2] <strong>activity</strong></p>
 
-<p>One variable named activity (lowercase) indicating the subject activity when
+<p>Activity (lowercase) indicating the subject activity when
 the sensor information was recorded.</p>
 
-<p><em>BODY ACCELERATION</em></p>
+<p>[3] <strong>bodyaccelerationxmean</strong></p>
 
-<p>A total of 6 variables with the following format:</p>
+<p>Mean acceleration in x-axis</p>
 
-<p>body_acceleration_xyz(mean|std)   </p>
+<p>[4] <strong>bodyaccelerationymean</strong></p>
 
-<p>example: body_acceleration_x(mean)   </p>
+<p>Mean acceleration in y-axis</p>
 
-<p><em>GRAVITY ACCELERATION</em></p>
+<p>[5] <strong>bodyaccelerationzmean</strong></p>
 
-<p>A total of 6 variables with the following format:</p>
+<p>Mean acceleration in z-axis</p>
 
-<p>gravity_acceleration_xyz(mean|std)</p>
+<p>[6] <strong>bodyaccelerationxstd</strong></p>
 
-<p>example: gravity_acceleration_z(std)</p>
+<p>Standard deviation for body acceleration x-axis</p>
 
-<p><em>BODY ACCELERATION JERK</em></p>
+<p>[7] <strong>bodyaccelerationystd</strong></p>
 
-<p>A total of 6 variables with the following format:</p>
+<p>Standard deviation for body acceleration y-axis</p>
 
-<p>body_acceleration_jerk_xyz(mean|std)
-example: body_acceleration_jerk_y(mean)</p>
+<p>[8] <strong>bodyaccelerationzstd</strong></p>
 
-<p><em>BODY GYROSCOPE</em></p>
+<p>Standard deviation for body acceleration z-axis</p>
 
-<p>A total of 6 variables with the following format:</p>
+<p>[9] <strong>gravityaccelerationxmean</strong></p>
 
-<p>body_gyro_xyz(mean|std)
-example: body_gyro_x(std)</p>
+<p>Mean gravitic acceleration in x-axis</p>
 
-<p><em>BODY GYROSCOPE JERK</em></p>
+<p>[10] <strong>gravityaccelerationymean</strong></p>
 
-<p>A total of 6 variables with the following format:</p>
+<p>Mean gravitic acceleration in y-axis</p>
 
-<p>body_gyro_jerk_xyz(mean|std)
-example: body_gyro_jerk_x(std)</p>
+<p>[11] <strong>gravityaccelerationzmean</strong></p>
+
+<p>Mean gravitic acceleration in z-axis</p>
+
+<p>[12] <strong>gravityaccelerationxstd</strong></p>
+
+<p>Standard deviation for gravitic acceleration in x-axis</p>
+
+<p>[13] <strong>gravityaccelerationystd</strong></p>
+
+<p>Standard deviation for gravitic acceleration in y-axis</p>
+
+<p>[14] <strong>gravityaccelerationzstd</strong></p>
+
+<p>Standard deviation for gravitic acceleration in z-axis</p>
+
+<p>[15] <strong>bodyaccelerationjerkxmean</strong></p>
+
+<p>Mean of body acceleration jerk in x-axis</p>
+
+<p>[16] <strong>bodyaccelerationjerkymean</strong></p>
+
+<p>Mean of body acceleration jerk in y-axis</p>
+
+<p>[17] <strong>bodyaccelerationjerkzmean</strong></p>
+
+<p>Mean of body acceleration jerk in z-axis</p>
+
+<p>[18] <strong>bodyaccelerationjerkxstd</strong></p>
+
+<p>Standard deviation for body acceleration jerk in x-axis</p>
+
+<p>[19] <strong>bodyaccelerationjerkystd</strong></p>
+
+<p>Standard deviation for body acceleration jerk in y-axis</p>
+
+<p>[20] <strong>bodyaccelerationjerkzstd</strong></p>
+
+<p>Standard deviation for body acceleration jerk in z-axis</p>
+
+<p>[21] <strong>bodygyroxmean</strong></p>
+
+<p>Mean of body gyroscope in x-axis</p>
+
+<p>[22] <strong>bodygyroymean</strong></p>
+
+<p>Mean of body gyroscope in y-axis</p>
+
+<p>[23] <strong>bodygyrozmean</strong></p>
+
+<p>Mean of body gyroscope in z-axis</p>
+
+<p>[24] <strong>bodygyroxstd</strong></p>
+
+<p>Standard deviation for body gyroscope in x-axis</p>
+
+<p>[25] <strong>bodygyroystd</strong></p>
+
+<p>Standard deviation for body gyroscope in y-axis</p>
+
+<p>[26] <strong>bodygyrozstd</strong></p>
+
+<p>Standard deviation for body gyroscope in z-axis</p>
+
+<p>[27] <strong>bodygyrojerkxmean</strong></p>
+
+<p>Mean of body gyroscope jerk in x-axis</p>
+
+<p>[28] <strong>bodygyrojerkymean</strong></p>
+
+<p>Mean of body gyroscope jerk in y-axis</p>
+
+<p>[29] <strong>bodygyrojerkzmean</strong></p>
+
+<p>Mean of body gyroscope jerk in z-axis</p>
+
+<p>[30] <strong>bodygyrojerkxstd</strong></p>
+
+<p>Standard deviation for body gyroscope in x-axis</p>
+
+<p>[31] <strong>bodygyrojerkystd</strong></p>
+
+<p>Standard deviation for body gyroscope in y-axis</p>
+
+<p>[32] <strong>bodygyrojerkzstd</strong></p>
+
+<p>Standard deviation for body gyroscope in z-axis</p>
 
 </body>
 
